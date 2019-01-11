@@ -7,13 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750A1B0621E8D23B008D1056 /* ChartSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B0521E8D23B008D1056 /* ChartSection.swift */; };
+		750A1B1021E8D466008D1056 /* DifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A1B0F21E8D466008D1056 /* DifferenceKit.framework */; };
+		750A1B3C21E8D6B4008D1056 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B3B21E8D6B4008D1056 /* Identifiable.swift */; };
+		750A1B3E21E8D781008D1056 /* ChartNodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B3D21E8D781008D1056 /* ChartNodeModel.swift */; };
+		750A1B4021E8D818008D1056 /* AnyEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B3F21E8D818008D1056 /* AnyEquatable.swift */; };
+		750A1B4221E8D9FA008D1056 /* ChartDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B4121E8D9FA008D1056 /* ChartDataSource.swift */; };
+		750A1B4421E8DB89008D1056 /* SBChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B4321E8DB89008D1056 /* SBChartView.swift */; };
 		757BC2AC21E7D49D002D5EDF /* SunburstChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 757BC2AA21E7D49D002D5EDF /* SunburstChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757BC2C721E7D61D002D5EDF /* ChartNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BC2C621E7D61D002D5EDF /* ChartNode.swift */; };
+		757BC2CA21E7D6BE002D5EDF /* ChartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BC2C921E7D6BE002D5EDF /* ChartScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		750A1B0521E8D23B008D1056 /* ChartSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSection.swift; sourceTree = "<group>"; };
+		750A1B0F21E8D466008D1056 /* DifferenceKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DifferenceKit.framework; path = Carthage/Build/Mac/DifferenceKit.framework; sourceTree = "<group>"; };
+		750A1B3B21E8D6B4008D1056 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		750A1B3D21E8D781008D1056 /* ChartNodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartNodeModel.swift; sourceTree = "<group>"; };
+		750A1B3F21E8D818008D1056 /* AnyEquatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEquatable.swift; sourceTree = "<group>"; };
+		750A1B4121E8D9FA008D1056 /* ChartDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataSource.swift; sourceTree = "<group>"; };
+		750A1B4321E8DB89008D1056 /* SBChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBChartView.swift; sourceTree = "<group>"; };
 		757BC2A721E7D49D002D5EDF /* SunburstChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SunburstChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		757BC2AA21E7D49D002D5EDF /* SunburstChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SunburstChart.h; sourceTree = "<group>"; };
 		757BC2AB21E7D49D002D5EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		757BC2C621E7D61D002D5EDF /* ChartNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartNode.swift; sourceTree = "<group>"; };
+		757BC2C921E7D6BE002D5EDF /* ChartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,16 +39,59 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				750A1B1021E8D466008D1056 /* DifferenceKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		750A1B0C21E8D382008D1056 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				750A1B0D21E8D388008D1056 /* Other */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		750A1B0D21E8D388008D1056 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				757BC2AA21E7D49D002D5EDF /* SunburstChart.h */,
+				757BC2AB21E7D49D002D5EDF /* Info.plist */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		750A1B0E21E8D439008D1056 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				750A1B0F21E8D466008D1056 /* DifferenceKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		750A1B3921E8D663008D1056 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		750A1B3A21E8D6A6008D1056 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				750A1B3F21E8D818008D1056 /* AnyEquatable.swift */,
+				750A1B3B21E8D6B4008D1056 /* Identifiable.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		757BC29D21E7D49D002D5EDF = {
 			isa = PBXGroup;
 			children = (
 				757BC2A921E7D49D002D5EDF /* SunburstChart */,
+				750A1B0E21E8D439008D1056 /* Frameworks */,
 				757BC2A821E7D49D002D5EDF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,10 +107,25 @@
 		757BC2A921E7D49D002D5EDF /* SunburstChart */ = {
 			isa = PBXGroup;
 			children = (
-				757BC2AA21E7D49D002D5EDF /* SunburstChart.h */,
-				757BC2AB21E7D49D002D5EDF /* Info.plist */,
+				757BC2C821E7D622002D5EDF /* Classes */,
+				750A1B0C21E8D382008D1056 /* Resources */,
 			);
 			path = SunburstChart;
+			sourceTree = "<group>";
+		};
+		757BC2C821E7D622002D5EDF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				750A1B4321E8DB89008D1056 /* SBChartView.swift */,
+				757BC2C621E7D61D002D5EDF /* ChartNode.swift */,
+				750A1B3D21E8D781008D1056 /* ChartNodeModel.swift */,
+				757BC2C921E7D6BE002D5EDF /* ChartScene.swift */,
+				750A1B4121E8D9FA008D1056 /* ChartDataSource.swift */,
+				750A1B0521E8D23B008D1056 /* ChartSection.swift */,
+				750A1B3A21E8D6A6008D1056 /* Helpers */,
+				750A1B3921E8D663008D1056 /* Protocols */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +150,7 @@
 				757BC2A321E7D49D002D5EDF /* Sources */,
 				757BC2A421E7D49D002D5EDF /* Frameworks */,
 				757BC2A521E7D49D002D5EDF /* Resources */,
+				750A1B1221E8D47A008D1056 /* Copy frameworks (Carthage) */,
 			);
 			buildRules = (
 			);
@@ -90,11 +167,13 @@
 		757BC29E21E7D49D002D5EDF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Oskar Groth";
 				TargetAttributes = {
 					757BC2A621E7D49D002D5EDF = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -104,6 +183,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 757BC29D21E7D49D002D5EDF;
 			productRefGroup = 757BC2A821E7D49D002D5EDF /* Products */;
@@ -125,11 +205,41 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		750A1B1221E8D47A008D1056 /* Copy frameworks (Carthage) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/DifferenceKit.framework",
+			);
+			name = "Copy frameworks (Carthage)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		757BC2A321E7D49D002D5EDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				750A1B0621E8D23B008D1056 /* ChartSection.swift in Sources */,
+				750A1B4021E8D818008D1056 /* AnyEquatable.swift in Sources */,
+				750A1B3C21E8D6B4008D1056 /* Identifiable.swift in Sources */,
+				757BC2C721E7D61D002D5EDF /* ChartNode.swift in Sources */,
+				750A1B3E21E8D781008D1056 /* ChartNodeModel.swift in Sources */,
+				750A1B4221E8D9FA008D1056 /* ChartDataSource.swift in Sources */,
+				757BC2CA21E7D6BE002D5EDF /* ChartScene.swift in Sources */,
+				750A1B4421E8DB89008D1056 /* SBChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,16 +370,21 @@
 		757BC2B021E7D49D002D5EDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZQK6SX26CE;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = SunburstChart/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SunburstChart/Resources/Other/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -278,7 +393,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.cindori.SunburstChart;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -286,16 +403,21 @@
 		757BC2B121E7D49D002D5EDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZQK6SX26CE;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = SunburstChart/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SunburstChart/Resources/Other/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -304,6 +426,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.cindori.SunburstChart;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 			};

@@ -1,0 +1,27 @@
+{
+  "Mac" : [
+    {
+      "name" : "DifferenceKit",
+      "hash" : "e078cdfce0a734401711e56a5b43abb50315a46d53a905b830ebda196ab6c071"
+    }
+  ],
+  "watchOS" : [
+    {
+      "name" : "DifferenceKit",
+      "hash" : "c7556d5d68ae5caad8b39c2ce5b123a688da9e44901b0bc5697f0aa32a345afc"
+    }
+  ],
+  "tvOS" : [
+    {
+      "name" : "DifferenceKit",
+      "hash" : "fab72a82a3fc69f7c0b277dcb79073d811797194c6896f76cc7e24d350c5a1c4"
+    }
+  ],
+  "commitish" : "0.8.0",
+  "iOS" : [
+    {
+      "name" : "DifferenceKit",
+      "hash" : "6a8d282a2d663e06ecface2c563e8e698db55af138df87b91cfc2a3e65bf27b6"
+    }
+  ]
+}
