@@ -7,31 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		750A1B0621E8D23B008D1056 /* ChartSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B0521E8D23B008D1056 /* ChartSection.swift */; };
 		750A1B1021E8D466008D1056 /* DifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A1B0F21E8D466008D1056 /* DifferenceKit.framework */; };
 		750A1B3C21E8D6B4008D1056 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B3B21E8D6B4008D1056 /* Identifiable.swift */; };
-		750A1B3E21E8D781008D1056 /* ChartNodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B3D21E8D781008D1056 /* ChartNodeModel.swift */; };
 		750A1B4021E8D818008D1056 /* AnyEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B3F21E8D818008D1056 /* AnyEquatable.swift */; };
-		750A1B4221E8D9FA008D1056 /* ChartDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B4121E8D9FA008D1056 /* ChartDataSource.swift */; };
-		750A1B4421E8DB89008D1056 /* SBChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B4321E8DB89008D1056 /* SBChartView.swift */; };
+		7568852521EB4CF900CDB5CA /* ChartNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7568852421EB4CF900CDB5CA /* ChartNode.swift */; };
 		757BC2AC21E7D49D002D5EDF /* SunburstChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 757BC2AA21E7D49D002D5EDF /* SunburstChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		757BC2C721E7D61D002D5EDF /* ChartNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BC2C621E7D61D002D5EDF /* ChartNode.swift */; };
-		757BC2CA21E7D6BE002D5EDF /* ChartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BC2C921E7D6BE002D5EDF /* ChartScene.swift */; };
+		75DFFE0621EB600C00790930 /* NSBezierPath+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFFE0521EB600C00790930 /* NSBezierPath+Extensions.swift */; };
+		75DFFE0821EB66C700790930 /* SBChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFFE0721EB66C700790930 /* SBChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		750A1B0521E8D23B008D1056 /* ChartSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSection.swift; sourceTree = "<group>"; };
 		750A1B0F21E8D466008D1056 /* DifferenceKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DifferenceKit.framework; path = Carthage/Build/Mac/DifferenceKit.framework; sourceTree = "<group>"; };
 		750A1B3B21E8D6B4008D1056 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
-		750A1B3D21E8D781008D1056 /* ChartNodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartNodeModel.swift; sourceTree = "<group>"; };
 		750A1B3F21E8D818008D1056 /* AnyEquatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEquatable.swift; sourceTree = "<group>"; };
-		750A1B4121E8D9FA008D1056 /* ChartDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataSource.swift; sourceTree = "<group>"; };
-		750A1B4321E8DB89008D1056 /* SBChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBChartView.swift; sourceTree = "<group>"; };
+		7568852421EB4CF900CDB5CA /* ChartNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartNode.swift; sourceTree = "<group>"; };
 		757BC2A721E7D49D002D5EDF /* SunburstChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SunburstChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		757BC2AA21E7D49D002D5EDF /* SunburstChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SunburstChart.h; sourceTree = "<group>"; };
 		757BC2AB21E7D49D002D5EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		757BC2C621E7D61D002D5EDF /* ChartNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartNode.swift; sourceTree = "<group>"; };
-		757BC2C921E7D6BE002D5EDF /* ChartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartScene.swift; sourceTree = "<group>"; };
+		75DFFE0521EB600C00790930 /* NSBezierPath+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSBezierPath+Extensions.swift"; sourceTree = "<group>"; };
+		75DFFE0721EB66C700790930 /* SBChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +75,20 @@
 		750A1B3A21E8D6A6008D1056 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				75DFFE0521EB600C00790930 /* NSBezierPath+Extensions.swift */,
 				750A1B3F21E8D818008D1056 /* AnyEquatable.swift */,
 				750A1B3B21E8D6B4008D1056 /* Identifiable.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7568852321EB4BCF00CDB5CA /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				7568852421EB4CF900CDB5CA /* ChartNode.swift */,
+				75DFFE0721EB66C700790930 /* SBChartView.swift */,
+			);
+			path = Drawing;
 			sourceTree = "<group>";
 		};
 		757BC29D21E7D49D002D5EDF = {
@@ -107,25 +111,20 @@
 		757BC2A921E7D49D002D5EDF /* SunburstChart */ = {
 			isa = PBXGroup;
 			children = (
-				757BC2C821E7D622002D5EDF /* Classes */,
+				757BC2C821E7D622002D5EDF /* Models */,
+				7568852321EB4BCF00CDB5CA /* Drawing */,
+				750A1B3A21E8D6A6008D1056 /* Helpers */,
+				750A1B3921E8D663008D1056 /* Protocols */,
 				750A1B0C21E8D382008D1056 /* Resources */,
 			);
 			path = SunburstChart;
 			sourceTree = "<group>";
 		};
-		757BC2C821E7D622002D5EDF /* Classes */ = {
+		757BC2C821E7D622002D5EDF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				750A1B4321E8DB89008D1056 /* SBChartView.swift */,
-				757BC2C621E7D61D002D5EDF /* ChartNode.swift */,
-				750A1B3D21E8D781008D1056 /* ChartNodeModel.swift */,
-				757BC2C921E7D6BE002D5EDF /* ChartScene.swift */,
-				750A1B4121E8D9FA008D1056 /* ChartDataSource.swift */,
-				750A1B0521E8D23B008D1056 /* ChartSection.swift */,
-				750A1B3A21E8D6A6008D1056 /* Helpers */,
-				750A1B3921E8D663008D1056 /* Protocols */,
 			);
-			path = Classes;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,14 +231,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				750A1B0621E8D23B008D1056 /* ChartSection.swift in Sources */,
 				750A1B4021E8D818008D1056 /* AnyEquatable.swift in Sources */,
 				750A1B3C21E8D6B4008D1056 /* Identifiable.swift in Sources */,
-				757BC2C721E7D61D002D5EDF /* ChartNode.swift in Sources */,
-				750A1B3E21E8D781008D1056 /* ChartNodeModel.swift in Sources */,
-				750A1B4221E8D9FA008D1056 /* ChartDataSource.swift in Sources */,
-				757BC2CA21E7D6BE002D5EDF /* ChartScene.swift in Sources */,
-				750A1B4421E8DB89008D1056 /* SBChartView.swift in Sources */,
+				75DFFE0621EB600C00790930 /* NSBezierPath+Extensions.swift in Sources */,
+				7568852521EB4CF900CDB5CA /* ChartNode.swift in Sources */,
+				75DFFE0821EB66C700790930 /* SBChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
