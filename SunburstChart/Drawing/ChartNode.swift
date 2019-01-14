@@ -102,23 +102,24 @@ public class ChartNode: CAShapeLayer, CAAnimationDelegate {
         animation.fromValue = 0
         animation.toValue = 1.0
         animation.duration = CFTimeInterval(1.2)
-        animation.delegate = self as CAAnimationDelegate
         animation.timingFunction = CAMediaTimingFunction(name: .easeOut)
         strokeEnd = 1.0
         add(animation, forKey: "strokeEnd")
     }
     
     func runHitAnimation() {
-        let timing = CAMediaTimingFunction(name: .easeIn)
-        let scaleAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.scale")
         CATransaction.begin()
-        CATransaction.setAnimationTimingFunction(timing)
-        scaleAnimation.duration = 0.2
-        scaleAnimation.fromValue = 1.0
-        scaleAnimation.toValue = 0.95
-        scaleAnimation.autoreverses = true
+        CATransaction.setAnimationTimingFunction(.init(name: .easeInEaseOut))
+        let scaleAnimation = CABasicAnimation(keyPath: "transform.scale", from: 1.0, to: 0.99, duration: 0.2, autoreverses: true)
+        let fadeAnimation = CABasicAnimation(keyPath: "strokeColor", from: strokeColor, to: model.color.darkerColor.cgColor, duration: 0.1, autoreverses: true)
         add(scaleAnimation, forKey: "scale")
+        add(fadeAnimation, forKey: "color")
         CATransaction.commit()
+    }
+    
+    func runHoverAnimation() {
+        print("hover animation")
+        add(CABasicAnimation(keyPath: "strokeColor", from: strokeColor, to: model.color.lighterColor.cgColor, duration: 0.25, timing: .easeInEaseOut, autoreverses: true, repeatCount: .infinity), forKey: "color")
     }
     
     required init?(coder aDecoder: NSCoder) {

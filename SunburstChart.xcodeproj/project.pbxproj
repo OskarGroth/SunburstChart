@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750342AC21EC9A92008DDB69 /* CAAnimation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750342AB21EC9A92008DDB69 /* CAAnimation+Extensions.swift */; };
+		750342AE21EC9AEC008DDB69 /* CAAnimationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750342AD21EC9AEC008DDB69 /* CAAnimationHandler.swift */; };
+		750342B021ECA092008DDB69 /* NSColor+LighterDarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750342AF21ECA092008DDB69 /* NSColor+LighterDarker.swift */; };
 		750A1B1021E8D466008D1056 /* DifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A1B0F21E8D466008D1056 /* DifferenceKit.framework */; };
 		750A1B3C21E8D6B4008D1056 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B3B21E8D6B4008D1056 /* Identifiable.swift */; };
 		750A1B4021E8D818008D1056 /* AnyEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B3F21E8D818008D1056 /* AnyEquatable.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		750342AB21EC9A92008DDB69 /* CAAnimation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAAnimation+Extensions.swift"; sourceTree = "<group>"; };
+		750342AD21EC9AEC008DDB69 /* CAAnimationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAAnimationHandler.swift; sourceTree = "<group>"; };
+		750342AF21ECA092008DDB69 /* NSColor+LighterDarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+LighterDarker.swift"; sourceTree = "<group>"; };
 		750A1B0F21E8D466008D1056 /* DifferenceKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DifferenceKit.framework; path = Carthage/Build/Mac/DifferenceKit.framework; sourceTree = "<group>"; };
 		750A1B3B21E8D6B4008D1056 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		750A1B3F21E8D818008D1056 /* AnyEquatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEquatable.swift; sourceTree = "<group>"; };
@@ -75,6 +81,9 @@
 		750A1B3A21E8D6A6008D1056 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				750342AB21EC9A92008DDB69 /* CAAnimation+Extensions.swift */,
+				750342AF21ECA092008DDB69 /* NSColor+LighterDarker.swift */,
+				750342AD21EC9AEC008DDB69 /* CAAnimationHandler.swift */,
 				75DFFE0521EB600C00790930 /* NSBezierPath+Extensions.swift */,
 				750A1B3F21E8D818008D1056 /* AnyEquatable.swift */,
 				750A1B3B21E8D6B4008D1056 /* Identifiable.swift */,
@@ -232,10 +241,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				750A1B4021E8D818008D1056 /* AnyEquatable.swift in Sources */,
+				750342B021ECA092008DDB69 /* NSColor+LighterDarker.swift in Sources */,
 				750A1B3C21E8D6B4008D1056 /* Identifiable.swift in Sources */,
+				750342AC21EC9A92008DDB69 /* CAAnimation+Extensions.swift in Sources */,
 				75DFFE0621EB600C00790930 /* NSBezierPath+Extensions.swift in Sources */,
 				7568852521EB4CF900CDB5CA /* ChartNode.swift in Sources */,
 				75DFFE0821EB66C700790930 /* SBChartView.swift in Sources */,
+				750342AE21EC9AEC008DDB69 /* CAAnimationHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

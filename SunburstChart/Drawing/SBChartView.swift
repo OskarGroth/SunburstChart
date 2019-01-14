@@ -10,6 +10,8 @@ import Foundation
 
 public class SBChartView: NSView {
     
+    var hoverNode: ChartNode?
+    
     override public init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         commonInit()
@@ -22,6 +24,11 @@ public class SBChartView: NSView {
     
     func commonInit() {
         wantsLayer = true
+    }
+    
+    override public func updateTrackingAreas() {
+        trackingAreas.forEach({ removeTrackingArea($0) })
+        addTrackingArea(NSTrackingArea(rect: bounds, options: [.activeWhenFirstResponder, .mouseMoved, .inVisibleRect], owner: self, userInfo: nil))
     }
     
     public func showSomeNodes() {
@@ -38,9 +45,12 @@ public class SBChartView: NSView {
     
     override public func mouseMoved(with event: NSEvent) {
         let point = convert(event.locationInWindow, from: nil)
-        let sublayers = layer!.sublayers!
-        guard let node = sublayers.first(where: { $0.contains($0.convert(point, from: layer!)) }) as? ChartNode else { return }
-        node.runHitAnimation()
+        let node = layer?.sublayers?.first(where: { $0.contains($0.convert(point, from: layer!)) }) as? ChartNode
+        if node != hoverNode {
+            hoverNode?.removeAllAnimations()
+            hoverNode = node
+            node?.runHoverAnimation()
+        }
     }
 
 }
