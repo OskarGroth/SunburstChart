@@ -18,6 +18,9 @@ public class ChartNode: CAShapeLayer, CAAnimationDelegate {
         /// The fraction of the size of all predecessing nodes on this arc. From 0.0 to 1.0.
         public var start: CGFloat
         
+        /// The level of which the node is placed in the hierarchy.
+        public var level: Int
+        
         /// The color of the node.
         public var color: NSColor
       
@@ -34,11 +37,13 @@ public class ChartNode: CAShapeLayer, CAAnimationDelegate {
         /// - Parameters:
         ///   - identifier: A string that uniquely identifies this cell model within the table view.
         ///   - size: The size of this node.
+        ///   - level: The level of this node in the hierarchy.
         ///   - start: The starting fraction of this node.
         ///   - color: The color for this node.
-        public init(identifier: String, size: CGFloat, start: CGFloat, color: NSColor) {
+        public init(identifier: String, size: CGFloat, level: Int, start: CGFloat, color: NSColor) {
             self.identifier = identifier
             self.size = size
+            self.level = level
             self.color = color
             self.start = start
         }
@@ -56,6 +61,8 @@ public class ChartNode: CAShapeLayer, CAAnimationDelegate {
     
     public var model: Model!
     private var closedPath: CGPath!
+    
+    private static let width: CGFloat = 40.0
     
     public init(model: Model) {
         super.init()
@@ -78,6 +85,7 @@ public class ChartNode: CAShapeLayer, CAAnimationDelegate {
         lineCap = .butt
         strokeStart = 0
         strokeEnd = 0
+        miterLimit = 0
         fillColor = NSColor.clear.cgColor
     }
     
@@ -85,9 +93,9 @@ public class ChartNode: CAShapeLayer, CAAnimationDelegate {
         self.model = model
         strokeColor = model.color.cgColor
         let cgPath = CGMutablePath()
-        cgPath.addArc(center: .zero, radius: 100, startAngle: .pi * 2 * model.start, endAngle: .pi * 2 * model.size, clockwise: true, transform: CGAffineTransform(rotationAngle: .pi/2))
+        cgPath.addArc(center: .zero, radius: CGFloat(model.level) * ChartNode.width, startAngle: .pi * 2 * model.start, endAngle: .pi * 2 * model.size, clockwise: true, transform: CGAffineTransform(rotationAngle: .pi/2))
         path = cgPath
-        closedPath = path?.copy(strokingWithWidth: 40, lineCap: .butt, lineJoin: .miter, miterLimit: 0)
+        closedPath = path?.copy(strokingWithWidth: ChartNode.width, lineCap: .butt, lineJoin: .miter, miterLimit: 0)
         animate(model.size)
     }
     
