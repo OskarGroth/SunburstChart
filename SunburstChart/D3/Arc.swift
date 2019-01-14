@@ -12,8 +12,8 @@ struct Arc {
     
     var path: CGPath
     
-    init(innerRadius: CGFloat, outerRadius: CGFloat, startAngle: CGFloat, endAngle: CGFloat) {
-        path.
-    }
+//    init(innerRadius: CGFloat, outerRadius: CGFloat, startAngle: CGFloat, endAngle: CGFloat) {
+//        
+//    }
     
 }

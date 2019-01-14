@@ -13,8 +13,10 @@
 		750A1B1021E8D466008D1056 /* DifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A1B0F21E8D466008D1056 /* DifferenceKit.framework */; };
 		750A1B3C21E8D6B4008D1056 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B3B21E8D6B4008D1056 /* Identifiable.swift */; };
 		750A1B4021E8D818008D1056 /* AnyEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B3F21E8D818008D1056 /* AnyEquatable.swift */; };
-		75285B8621ECCD0F00D0312E /* Partition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75285B8521ECCD0F00D0312E /* Partition.swift */; };
 		75285B8921ECD72100D0312E /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75285B8821ECD72100D0312E /* Arc.swift */; };
+		75285B8B21ECEF5200D0312E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75285B8A21ECEF5200D0312E /* Node.swift */; };
+		75285B8D21ECF2E900D0312E /* D3Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75285B8C21ECF2E900D0312E /* D3Test.swift */; };
+		75285B8F21ECF3A800D0312E /* Partition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75285B8E21ECF3A800D0312E /* Partition.swift */; };
 		7568852521EB4CF900CDB5CA /* ChartNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7568852421EB4CF900CDB5CA /* ChartNode.swift */; };
 		757BC2AC21E7D49D002D5EDF /* SunburstChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 757BC2AA21E7D49D002D5EDF /* SunburstChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75DFFE0621EB600C00790930 /* NSBezierPath+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFFE0521EB600C00790930 /* NSBezierPath+Extensions.swift */; };
@@ -28,8 +30,10 @@
 		750A1B0F21E8D466008D1056 /* DifferenceKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DifferenceKit.framework; path = Carthage/Build/Mac/DifferenceKit.framework; sourceTree = "<group>"; };
 		750A1B3B21E8D6B4008D1056 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		750A1B3F21E8D818008D1056 /* AnyEquatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEquatable.swift; sourceTree = "<group>"; };
-		75285B8521ECCD0F00D0312E /* Partition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partition.swift; sourceTree = "<group>"; };
 		75285B8821ECD72100D0312E /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
+		75285B8A21ECEF5200D0312E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		75285B8C21ECF2E900D0312E /* D3Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D3Test.swift; sourceTree = "<group>"; };
+		75285B8E21ECF3A800D0312E /* Partition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partition.swift; sourceTree = "<group>"; };
 		7568852421EB4CF900CDB5CA /* ChartNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartNode.swift; sourceTree = "<group>"; };
 		757BC2A721E7D49D002D5EDF /* SunburstChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SunburstChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		757BC2AA21E7D49D002D5EDF /* SunburstChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SunburstChart.h; sourceTree = "<group>"; };
@@ -98,7 +102,10 @@
 		75285B8721ECD71600D0312E /* D3 */ = {
 			isa = PBXGroup;
 			children = (
+				75285B8C21ECF2E900D0312E /* D3Test.swift */,
+				75285B8E21ECF3A800D0312E /* Partition.swift */,
 				75285B8821ECD72100D0312E /* Arc.swift */,
+				75285B8A21ECEF5200D0312E /* Node.swift */,
 			);
 			path = D3;
 			sourceTree = "<group>";
@@ -108,7 +115,6 @@
 			children = (
 				7568852421EB4CF900CDB5CA /* ChartNode.swift */,
 				75DFFE0721EB66C700790930 /* SBChartView.swift */,
-				75285B8521ECCD0F00D0312E /* Partition.swift */,
 			);
 			path = Drawing;
 			sourceTree = "<group>";
@@ -257,12 +263,14 @@
 				750A1B4021E8D818008D1056 /* AnyEquatable.swift in Sources */,
 				750342B021ECA092008DDB69 /* NSColor+LighterDarker.swift in Sources */,
 				75285B8921ECD72100D0312E /* Arc.swift in Sources */,
+				75285B8B21ECEF5200D0312E /* Node.swift in Sources */,
 				750A1B3C21E8D6B4008D1056 /* Identifiable.swift in Sources */,
 				750342AC21EC9A92008DDB69 /* CAAnimation+Extensions.swift in Sources */,
 				75DFFE0621EB600C00790930 /* NSBezierPath+Extensions.swift in Sources */,
-				75285B8621ECCD0F00D0312E /* Partition.swift in Sources */,
+				75285B8F21ECF3A800D0312E /* Partition.swift in Sources */,
 				7568852521EB4CF900CDB5CA /* ChartNode.swift in Sources */,
 				75DFFE0821EB66C700790930 /* SBChartView.swift in Sources */,
+				75285B8D21ECF2E900D0312E /* D3Test.swift in Sources */,
 				750342AE21EC9AEC008DDB69 /* CAAnimationHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
