@@ -28,7 +28,7 @@ public class SBChartView: NSView {
     
     override public func updateTrackingAreas() {
         trackingAreas.forEach({ removeTrackingArea($0) })
-        addTrackingArea(NSTrackingArea(rect: bounds, options: [.activeWhenFirstResponder, .mouseMoved, .inVisibleRect], owner: self, userInfo: nil))
+        addTrackingArea(NSTrackingArea(rect: bounds, options: [.activeInKeyWindow, .mouseMoved, .inVisibleRect], owner: self, userInfo: nil))
     }
     
     public func showSomeNodes() {

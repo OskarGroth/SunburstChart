@@ -118,7 +118,6 @@ public class ChartNode: CAShapeLayer, CAAnimationDelegate {
     }
     
     func runHoverAnimation() {
-        print("hover animation")
         add(CABasicAnimation(keyPath: "strokeColor", from: strokeColor, to: model.color.lighterColor.cgColor, duration: 0.25, timing: .easeInEaseOut, autoreverses: true, repeatCount: .infinity), forKey: "color")
     }
     
