@@ -19,6 +19,8 @@ class ViewController: NSViewController {
         view.addSubview(chartView)
         chartView.showSomeNodes()
     }
+    
+ 
 
 
 }

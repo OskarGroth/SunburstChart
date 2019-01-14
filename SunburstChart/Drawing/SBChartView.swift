@@ -10,6 +10,11 @@ import Foundation
 
 public class SBChartView: NSView {
     
+    var data: NSTreeNode? {
+        didSet {
+            reloadData()
+        }
+    }
     var hoverNode: ChartNode?
     
     override public init(frame frameRect: NSRect) {
@@ -31,14 +36,22 @@ public class SBChartView: NSView {
         addTrackingArea(NSTrackingArea(rect: bounds, options: [.activeInKeyWindow, .mouseMoved, .inVisibleRect], owner: self, userInfo: nil))
     }
     
-    public func showSomeNodes() {
-        let node = ChartNode(model: .init(identifier: "node 1", size: 0.75, level: 1, start: 0, color: .orange))
-        node.frame = CGRect(x: 300, y: 300, width: node.frame.width, height: node.frame.height)
-        layer?.addSublayer(node)
+    public func reloadData() {
+        layer?.sublayers?.removeAll()
         
-        let node2 = ChartNode(model: .init(identifier: "node 2", size: 0.4, level: 2, start: 0, color: .green))
-        node2.frame = CGRect(x: 300, y: 300, width: node.frame.width, height: node.frame.height)
-        layer?.addSublayer(node2)
+    }
+    
+    public func showSomeNodes() {
+        let colors = [NSColor.blue, NSColor.orange, NSColor.yellow, NSColor.green, NSColor.cyan, NSColor.magenta]
+        for i in 0...400 {
+            DispatchQueue.main.async {
+                let node = ChartNode(model: .init(identifier: "node \(i)", size: CGFloat(arc4random_uniform(100))/100, level: Int(arc4random_uniform(10)), start: 0, color: colors[Int(arc4random_uniform(6))]))
+                node.frame = CGRect(x: 300, y: 300, width: node.frame.width, height: node.frame.height)
+                self.layer?.addSublayer(node)
+            }
+
+        }
+        
     }
     
     override public func mouseDown(with event: NSEvent) {
