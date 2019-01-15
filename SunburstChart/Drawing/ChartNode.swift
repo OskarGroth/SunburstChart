@@ -60,8 +60,13 @@ public class ChartNode: CAShapeLayer, CAAnimationDelegate {
     }
     
     public var model: Model!
+    override public var path: CGPath? {
+        didSet {
+            //closedPath = path?.copy(strokingWithWidth: ChartNode.width, lineCap: .butt, lineJoin: .miter, miterLimit: 0)
+        }
+    }
     private var closedPath: CGPath!
-    
+        
     private static let width: CGFloat = 40.0
     
     public init(model: Model) {
@@ -87,6 +92,16 @@ public class ChartNode: CAShapeLayer, CAAnimationDelegate {
         strokeEnd = 0
         miterLimit = 0
         fillColor = NSColor.clear.cgColor
+    }
+    
+    func setup(startAngle: CGFloat, endAngle: CGFloat, innerRadius: CGFloat, outerRadius: CGFloat) {
+        strokeColor = NSColor.purple.cgColor
+        strokeEnd = 1.0
+        lineWidth = outerRadius-innerRadius
+        let cgPath = CGMutablePath()
+        cgPath.addArc(center: .zero, radius: innerRadius, startAngle: startAngle, endAngle: endAngle, clockwise: true, transform: CGAffineTransform(rotationAngle: .pi/2))
+        path = cgPath
+        closedPath = path?.copy(strokingWithWidth: outerRadius-innerRadius, lineCap: .butt, lineJoin: .miter, miterLimit: 0)
     }
     
     func setup(_ model: Model) {
@@ -119,14 +134,15 @@ public class ChartNode: CAShapeLayer, CAAnimationDelegate {
         CATransaction.begin()
         CATransaction.setAnimationTimingFunction(.init(name: .easeInEaseOut))
         let scaleAnimation = CABasicAnimation(keyPath: "transform.scale", from: 1.0, to: 0.99, duration: 0.2, autoreverses: true)
-        let fadeAnimation = CABasicAnimation(keyPath: "strokeColor", from: strokeColor, to: model.color.darkerColor.cgColor, duration: 0.1, autoreverses: true)
+        //let fadeAnimation = CABasicAnimation(keyPath: "strokeColor", from: strokeColor, to: model.color.darkerColor.cgColor, duration: 0.1, autoreverses: true)
         add(scaleAnimation, forKey: "scale")
-        add(fadeAnimation, forKey: "color")
+        //add(fadeAnimation, forKey: "color")
         CATransaction.commit()
+        print("Click \(name)")
     }
     
     func runHoverAnimation() {
-        add(CABasicAnimation(keyPath: "strokeColor", from: strokeColor, to: model.color.lighterColor.cgColor, duration: 0.25, timing: .easeInEaseOut, autoreverses: true, repeatCount: .infinity), forKey: "color")
+        //add(CABasicAnimation(keyPath: "strokeColor", from: strokeColor, to: model.color.lighterColor.cgColor, duration: 0.25, timing: .easeInEaseOut, autoreverses: true, repeatCount: .infinity), forKey: "color")
     }
     
     required init?(coder aDecoder: NSCoder) {

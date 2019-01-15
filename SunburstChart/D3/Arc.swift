@@ -11,9 +11,14 @@ import Foundation
 struct Arc {
     
     var path: CGPath
+    var closedPath: CGPath
     
-//    init(innerRadius: CGFloat, outerRadius: CGFloat, startAngle: CGFloat, endAngle: CGFloat) {
-//        
-//    }
+    init(startAngle: CGFloat, endAngle: CGFloat, innerRadius: CGFloat, outerRadius: CGFloat) {
+        let cgPath = CGMutablePath()
+        cgPath.addArc(center: .zero, radius: innerRadius, startAngle: startAngle, endAngle: endAngle, clockwise: true, transform: CGAffineTransform(rotationAngle: .pi/2))
+        path = cgPath
+        closedPath = path.copy(strokingWithWidth: outerRadius-innerRadius, lineCap: .butt, lineJoin: .miter, miterLimit: 0)
+        
+    }
     
 }

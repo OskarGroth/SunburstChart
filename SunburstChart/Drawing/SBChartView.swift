@@ -30,11 +30,7 @@ public class SBChartView: NSView {
         trackingAreas.forEach({ removeTrackingArea($0) })
         addTrackingArea(NSTrackingArea(rect: bounds, options: [.activeInKeyWindow, .mouseMoved, .inVisibleRect], owner: self, userInfo: nil))
     }
-    
-    public func showSomeNodes() {
-        d3Test()
-    }
-    
+
     override public func mouseDown(with event: NSEvent) {
         let point = convert(event.locationInWindow, from: nil)
         guard let node = layer?.sublayers?.first(where: { $0.contains($0.convert(point, from: layer!)) }) as? ChartNode else { return }

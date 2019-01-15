@@ -10,17 +10,18 @@ import Foundation
 
 public class Node {
     
-    var x0: CGFloat = 0
-    var y0: CGFloat = 0
-    var x1: CGFloat = 0
-    var y1: CGFloat = 0
+    var x0: CGFloat = 0 // start angle
+    var y0: CGFloat = 0 // inner radius
+    var x1: CGFloat = 0 // end angle
+    var y1: CGFloat = 0 // outer radius
     
     var name: String
     var size: CGFloat
     var children: [Node]
+    var height: Int = 0
     
     var parent: Node?
-    var height: Int {
+    var depth: Int {
         var h = 0
         var p = parent
         while p != nil {
