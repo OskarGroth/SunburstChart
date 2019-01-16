@@ -41,7 +41,6 @@ extension Node {
 ///  Creates a new partition layout with the default settings: the default sort order is by descending value; the default value accessor assumes each input data is an object with a numeric value attribute; the default children accessor assumes each input data is an object with a children array; the default size is 1×1
 class Partition {
  
-    var round: Bool = false
     var padding: CGFloat = 0
     
     private var dx: CGFloat = 1
@@ -68,7 +67,6 @@ class Partition {
         root.x1 = dx
         root.y1 = dy/CGFloat(n)
         root.eachBefore(callback: positionNode(dy: dy, n: n, padding: padding))
-        //if round { root.eachBefore(callback: { roundNode }) }
         return root
     }
     

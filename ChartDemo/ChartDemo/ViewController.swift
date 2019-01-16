@@ -18,6 +18,7 @@ class ViewController: NSViewController {
         chartView.autoresizingMask = [.width, .height]
         view.addSubview(chartView)
         chartView.d3Test()
+       // chartView.showSomeNodes()
     }
 
 

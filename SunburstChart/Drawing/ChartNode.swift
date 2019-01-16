@@ -66,7 +66,7 @@ public class ChartNode: CAShapeLayer, CAAnimationDelegate {
         }
     }
     private var closedPath: CGPath!
-        
+    
     private static let width: CGFloat = 40.0
     
     public init(model: Model) {
@@ -90,16 +90,18 @@ public class ChartNode: CAShapeLayer, CAAnimationDelegate {
         lineCap = .butt
         strokeStart = 0
         strokeEnd = 0
-        miterLimit = 0
+        //miterLimit = 0
         fillColor = NSColor.clear.cgColor
+        shouldRasterize = true
+        rasterizationScale = 4 * NSScreen.main!.backingScaleFactor
     }
     
     func setup(startAngle: CGFloat, endAngle: CGFloat, innerRadius: CGFloat, outerRadius: CGFloat) {
-        strokeColor = NSColor.purple.cgColor
         strokeEnd = 1.0
+        strokeColor = NSColor.purple.cgColor
         lineWidth = outerRadius-innerRadius
         let cgPath = CGMutablePath()
-        cgPath.addArc(center: .zero, radius: innerRadius, startAngle: startAngle, endAngle: endAngle, clockwise: true, transform: CGAffineTransform(rotationAngle: .pi/2))
+        cgPath.addRelativeArc(center: .zero, radius: innerRadius, startAngle: -startAngle, delta: -(endAngle-startAngle), transform: CGAffineTransform(rotationAngle: .pi/2))
         path = cgPath
         closedPath = path?.copy(strokingWithWidth: outerRadius-innerRadius, lineCap: .butt, lineJoin: .miter, miterLimit: 0)
     }

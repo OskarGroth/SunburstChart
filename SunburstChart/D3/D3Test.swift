@@ -62,28 +62,29 @@ extension SBChartView {
     static var radius: CGFloat = 250.0
     
     public func d3Test() {
-        
         var partition = Partition()
         partition.setSize(x: 2 * CGFloat.pi, y: SBChartView.radius)
-        
+
         var root = SBChartView.nodeData
         partition.partition(root: &root)
         
         let nodes = root.descendants()
-        print(nodes.count)
+        
         for node in nodes {
             print("\n\(node.name)\n Size: (\(node.size)): Depth: \(node.depth) Height: \(node.height)\nx0: \(node.x0)\nx1: \(node.x1) \ny0: \(node.y0)\ny1: \(node.y1)")
-        }
-        for node in nodes {
             let chartNode = ChartNode()
+           // chartNode.setup(.init(identifier: node.name, size: node., level: node.depth, start: node.x1, color: <#T##NSColor#>))
             chartNode.setup(startAngle: node.x0, endAngle: node.x1, innerRadius: node.y0, outerRadius: node.y1)
             chartNode.frame = CGRect(x: 300, y: 300, width: chartNode.frame.width, height: chartNode.frame.height)
-            chartNode.strokeColor = NSColor.random().cgColor
+            if node.depth == 0 {
+                chartNode.strokeColor = NSColor.clear.cgColor
+            } else {
+                chartNode.strokeColor = NSColor.random().cgColor
+            }
+            chartNode.fillColor = NSColor.clear.cgColor
             chartNode.name = node.name
-            //chartNode.fillColor = chartNode.strokeColor
-            layer?.addSublayer(chartNode)
+            self.layer?.addSublayer(chartNode)
         }
-        //d3.arc
         
     }
     
@@ -94,7 +95,7 @@ extension NSColor {
         let red =   UInt32.random(in: 0...255)
         let green = UInt32.random(in: 0...255)
         let blue =  UInt32.random(in: 0...255)
-        let color = NSColor(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: 1)
+        let color = NSColor(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: 1.0)
         return color
     }
 }
