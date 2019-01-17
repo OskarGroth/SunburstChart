@@ -11,7 +11,7 @@ import SunburstChart
 
 class ViewController: NSViewController {
     
-    lazy var chartView = SBChartView(frame: view.bounds)
+    lazy var chartView = ArcChartView(frame: view.bounds)
     
     override func viewDidLoad() {
         super.viewDidLoad()

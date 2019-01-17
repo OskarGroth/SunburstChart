@@ -1,5 +1,5 @@
 //
-//  SBChartView.swift
+//  ArcChartView.swift
 //  SunburstChart
 //
 //  Created by Oskar Groth on 2019-01-13.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class SBChartView: NSView {
+public class ArcChartView: NSView {
     
     var hoverArc: ArcLayer?
     

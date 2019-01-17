@@ -1,5 +1,5 @@
 //
-//  ChartNode.swift
+//  ArcLayer.swift
 //  SunburstChart
 //
 //  Created by Oskar Groth on 2019-01-13.

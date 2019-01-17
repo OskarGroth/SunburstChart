@@ -38,7 +38,7 @@ extension Node {
     
 }
 
-extension SBChartView {
+extension ArcChartView {
     
     static let nodeData: Node = {
         let a = Node(name: "Topic A", size: 8, children: [Node(name: "Sub A1", size: 4, children: []), Node(name: "Sub A2", size: 4, children: [])])
@@ -63,9 +63,9 @@ extension SBChartView {
     
     public func d3Test() {
         let partition = Partition()
-        partition.setSize(x: 2 * CGFloat.pi, y: SBChartView.radius)
+        partition.setSize(x: 2 * CGFloat.pi, y: ArcChartView.radius)
 
-        var root = SBChartView.nodeData
+        var root = ArcChartView.nodeData
         partition.partition(root: &root)
         
         let nodes = root.descendants()
