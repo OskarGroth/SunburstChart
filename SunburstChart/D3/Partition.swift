@@ -9,17 +9,7 @@
 import Foundation
 
 extension Node {
-    
-    /*export default function(callback) {
-         var node = this, nodes = [node], children, i;
-         while (node = nodes.pop()) {
-             callback(node), children = node.children;
-             if (children) for (i = children.length - 1; i >= 0; --i) {
-                nodes.push(children[i]);
-             }
-         }
-     return this;
-     }*/
+
     func eachBefore(callback: ((inout Node) -> Void)){
         var node = self
         var nodes = [node]
@@ -103,7 +93,6 @@ class Partition {
     func positionNode(dy: CGFloat, n: Int, padding: CGFloat) -> ((inout Node) -> Void) {
         return { node in
             if !node.children.isEmpty {
-                //treemapDice(node, node.x0, dy * (node.depth + 1) / n, node.x1, dy * (node.depth + 2) / n);
                 self.treemapDice(parent: &node, x0: node.x0, y0: dy * CGFloat(node.depth + 1) / CGFloat(n), x1: node.x1, y1: dy * CGFloat(node.depth + 2) / CGFloat(n))
             }
             var x0 = node.x0

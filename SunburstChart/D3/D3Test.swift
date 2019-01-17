@@ -62,7 +62,7 @@ extension SBChartView {
     static var radius: CGFloat = 250.0
     
     public func d3Test() {
-        var partition = Partition()
+        let partition = Partition()
         partition.setSize(x: 2 * CGFloat.pi, y: SBChartView.radius)
 
         var root = SBChartView.nodeData
@@ -72,18 +72,17 @@ extension SBChartView {
         
         for node in nodes {
             print("\n\(node.name)\n Size: (\(node.size)): Depth: \(node.depth) Height: \(node.height)\nx0: \(node.x0)\nx1: \(node.x1) \ny0: \(node.y0)\ny1: \(node.y1)")
-            let chartNode = ChartNode()
-           // chartNode.setup(.init(identifier: node.name, size: node., level: node.depth, start: node.x1, color: <#T##NSColor#>))
-            chartNode.setup(startAngle: node.x0, endAngle: node.x1, innerRadius: node.y0, outerRadius: node.y1)
-            chartNode.frame = CGRect(x: 300, y: 300, width: chartNode.frame.width, height: chartNode.frame.height)
+            let arc = ArcLayer()
+            arc.path = CGPath.makeArc(startAngle: node.x0, endAngle: node.x1, radius: node.y0, width: node.y1-node.y0)
+            arc.frame = CGRect(x: 300, y: 300, width: arc.frame.width, height: arc.frame.height)
             if node.depth == 0 {
-                chartNode.strokeColor = NSColor.clear.cgColor
+                arc.fillColor = NSColor.clear.cgColor
             } else {
-                chartNode.strokeColor = NSColor.random().cgColor
+                arc.fillColor = NSColor.random().cgColor
             }
-            chartNode.fillColor = NSColor.clear.cgColor
-            chartNode.name = node.name
-            self.layer?.addSublayer(chartNode)
+            arc.strokeColor = NSColor.windowBackgroundColor.cgColor
+            arc.name = node.name
+            layer?.addSublayer(arc)
         }
         
     }
