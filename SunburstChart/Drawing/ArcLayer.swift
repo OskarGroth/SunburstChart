@@ -10,6 +10,10 @@ import Foundation
 
 public class ArcLayer: CAShapeLayer, CAAnimationDelegate {
     
+    var currentScale: CGFloat {
+        return (superlayer as? ArcContainerLayer)?.scale ?? 1.0
+    }
+        
     override public init() {
         super.init()
         commonInit()
@@ -22,7 +26,7 @@ public class ArcLayer: CAShapeLayer, CAAnimationDelegate {
     
     func commonInit() {
         lineWidth = 1
-        shouldRasterize = true
+        shouldRasterize = false
         rasterizationScale = 4 * NSScreen.main!.backingScaleFactor
     }
     
@@ -43,10 +47,10 @@ public class ArcLayer: CAShapeLayer, CAAnimationDelegate {
     }
     
     func runHitAnimation() {
+        let scale = currentScale
         CATransaction.begin()
         CATransaction.setAnimationTimingFunction(.init(name: .easeInEaseOut))
-        
-        let scaleAnimation = CABasicAnimation(keyPath: "transform.scale", from: 1.0, to: 0.99, duration: 0.2, autoreverses: true)
+        let scaleAnimation = CABasicAnimation(keyPath: "transform.scale", from: scale, to: scale*0.98, duration: 0.2, autoreverses: true)
         let fadeAnimation = CABasicAnimation(keyPath: "fillColor", from: fillColor, to: NSColor(cgColor: fillColor!)!.darkerColor.cgColor, duration: 0.1, autoreverses: true)
         add(scaleAnimation, forKey: "scale")
         add(fadeAnimation, forKey: "color")

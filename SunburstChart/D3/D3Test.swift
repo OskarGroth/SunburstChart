@@ -9,7 +9,6 @@
 import Foundation
 
 extension Node {
-
     
     func descendants() -> [Node] {
         var nodes = [Node]()
@@ -59,6 +58,25 @@ extension ArcChartView {
         return node
     }()
     
+    static let nodeData2: Node = {
+        let a = Node(name: "Topic A", size: 5, children: [Node(name: "Sub A1", size: 1, children: []), Node(name: "Sub A2", size: 4, children: [])])
+        let b = Node(name: "Topic B", size: 9, children: [Node(name: "Sub B1", size: 3, children: []), Node(name: "Sub B2", size: 3, children: []), Node(name: "Sub B3", size: 3, children: [])])
+        let c = Node(name: "Topic C", size: 8, children: [Node(name: "Sub C1", size: 4, children: []), Node(name: "Sub C2", size: 4, children: [])])
+        let node = Node(name: "TOPICS", size: 25, children: [a, b, c])
+        
+        func assignParents(n: Node) -> Int {
+            var heights = [Int]()
+            for child in n.children {
+                child.parent = n
+                heights.append(1 + assignParents(n: child))
+                child.height = heights.last! - 1
+            }
+            return heights.max() ?? 0
+        }
+        node.height = assignParents(n: node)
+        return node
+    }()
+    
     static var radius: CGFloat = 250.0
     
     public func d3Test() {
@@ -71,10 +89,9 @@ extension ArcChartView {
         let nodes = root.descendants()
         
         for node in nodes {
-            print("\n\(node.name)\n Size: (\(node.size)): Depth: \(node.depth) Height: \(node.height)\nx0: \(node.x0)\nx1: \(node.x1) \ny0: \(node.y0)\ny1: \(node.y1)")
+            //print("\n\(node.name)\n Size: (\(node.size)): Depth: \(node.depth) Height: \(node.height)\nx0: \(node.x0)\nx1: \(node.x1) \ny0: \(node.y0)\ny1: \(node.y1)")
             let arc = ArcLayer()
             arc.path = CGPath.makeArc(startAngle: node.x0, endAngle: node.x1, radius: node.y0, width: node.y1-node.y0)
-            arc.frame = CGRect(x: 300, y: 300, width: arc.frame.width, height: arc.frame.height)
             if node.depth == 0 {
                 arc.fillColor = NSColor.clear.cgColor
             } else {
@@ -82,8 +99,26 @@ extension ArcChartView {
             }
             arc.strokeColor = NSColor.windowBackgroundColor.cgColor
             arc.name = node.name
-            layer?.addSublayer(arc)
+            addArc(arc)
         }
+        
+        /*DispatchQueue.global().async {
+            sleep(1)
+            for node in nodes {
+                print("\n\(node.name)\n Size: (\(node.size)): Depth: \(node.depth) Height: \(node.height)\nx0: \(node.x0)\nx1: \(node.x1) \ny0: \(node.y0)\ny1: \(node.y1)")
+                let arc = ArcLayer()
+                arc.path = CGPath.makeArc(startAngle: node.x0, endAngle: node.x1, radius: node.y0, width: node.y1-node.y0)
+                arc.frame = CGRect(x: 300, y: 300, width: arc.frame.width, height: arc.frame.height)
+                if node.depth == 0 {
+                    arc.fillColor = NSColor.clear.cgColor
+                } else {
+                    arc.fillColor = NSColor.random().cgColor
+                }
+                arc.strokeColor = NSColor.windowBackgroundColor.cgColor
+                arc.name = node.name
+                layer?.addSublayer(arc)
+            }
+        }*/
         
     }
     

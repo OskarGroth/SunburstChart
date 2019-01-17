@@ -10,6 +10,8 @@ import Foundation
 
 public class ArcChartView: NSView {
     
+    static let defaultSize: CGFloat = 500.0
+
     var hoverArc: ArcLayer?
     
     override public init(frame frameRect: NSRect) {
@@ -22,8 +24,14 @@ public class ArcChartView: NSView {
         commonInit()
     }
     
+    func addArc(_ arc: ArcLayer) {
+        layer?.addSublayer(arc)
+        layer?.resizeSublayers(withOldSize: layer!.bounds.size)
+    }
+    
     func commonInit() {
         wantsLayer = true
+        layer = ArcContainerLayer()
     }
     
     override public func updateTrackingAreas() {
