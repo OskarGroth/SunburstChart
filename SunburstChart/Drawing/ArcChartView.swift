@@ -24,7 +24,7 @@ public class ArcChartView: NSView {
         commonInit()
     }
     
-    func addArc(_ arc: ArcLayer) {
+    public func addArc(_ arc: ArcLayer) {
         layer?.addSublayer(arc)
         layer?.resizeSublayers(withOldSize: layer!.bounds.size)
     }
