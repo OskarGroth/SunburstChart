@@ -8,6 +8,7 @@
 
 import Cocoa
 import SunburstChart
+import os
 
 class ViewController: NSViewController {
     
@@ -54,20 +55,83 @@ class ViewController: NSViewController {
     func d3Test() {
         let partition = TreePartition(root: ViewController.nodeData, size: 250)
         print(partition.nodes.count)
-        let layoutChanges = partition.calculateLayoutChanges()
-        for (index, node) in partition.nodes.enumerated() {
-            node.layout = layoutChanges[index]!
-            let arc = ArcLayer()
-            if node.depth == 0 {
-                arc.fillColor = NSColor.clear.cgColor
-            } else {
-                arc.fillColor = NSColor.random().cgColor
+        for i in 0...30 {
+            
+            let logg = OSLog(
+                subsystem: "org.cindori.ChartDemo",
+                category: "ChartBuilding"
+            )
+            let signpostID = OSSignpostID(log: logg)
+            os_signpost(.begin,
+                log: logg,
+                name: "Calculate layout changes",
+                signpostID: signpostID,
+                "%{public}s",
+                "TreePartition"
+            )
+
+            /// Calculate layout changes
+            let layoutChanges = partition.calculateLayoutChanges()
+            
+            os_signpost(.end,
+                log: logg,
+                name: "Calculate layout changes",
+                signpostID: signpostID,
+                "%{public}s",
+                "TreePartition"
+            )
+            
+            
+            for node in partition.nodes {
+                os_signpost(.begin,
+                    log: logg,
+                    name: "Arc setup",
+                    signpostID: signpostID,
+                    "%{public}s",
+                    "Node Setup"
+                )
+                
+                /// Perform arc setup
+                let arc = ArcLayer()
+                if node.depth == 0 {
+                    arc.fillColor = NSColor.clear.cgColor
+                } else {
+                    arc.fillColor = NSColor.random().cgColor
+                }
+                arc.strokeColor = NSColor.windowBackgroundColor.cgColor
+                arc.name = node.name
+                if let newLayout = layoutChanges[node] {
+                    arc.update(newLayout)
+                }
+                
+                os_signpost(.end,
+                    log: logg,
+                    name: "Arc setup",
+                    signpostID: signpostID,
+                    "%{public}s",
+                    "Node Setup"
+                )
+                
+                os_signpost(.begin,
+                    log: logg,
+                    name: "Add Arc to Chart",
+                    signpostID: signpostID,
+                    "%{public}s",
+                    "Add Arc"
+                )
+                
+                chartView.addArc(arc)
+                
+                os_signpost(.end,
+                    log: logg,
+                    name: "Add Arc to Chart",
+                    signpostID: signpostID,
+                    "%{public}s",
+                    "Node Setup"
+                )
             }
-            arc.strokeColor = NSColor.windowBackgroundColor.cgColor
-            arc.name = node.name
-            arc.update(node.layout)
-            chartView.addArc(arc)
         }
+ 
     }
     
 }
