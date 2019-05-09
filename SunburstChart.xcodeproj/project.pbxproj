@@ -10,28 +10,32 @@
 		750342AC21EC9A92008DDB69 /* CAAnimation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750342AB21EC9A92008DDB69 /* CAAnimation+Extensions.swift */; };
 		750342AE21EC9AEC008DDB69 /* CAAnimationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750342AD21EC9AEC008DDB69 /* CAAnimationHandler.swift */; };
 		750342B021ECA092008DDB69 /* NSColor+LighterDarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750342AF21ECA092008DDB69 /* NSColor+LighterDarker.swift */; };
-		750A1B1021E8D466008D1056 /* DifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750A1B0F21E8D466008D1056 /* DifferenceKit.framework */; };
-		750A1B3C21E8D6B4008D1056 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B3B21E8D6B4008D1056 /* Identifiable.swift */; };
-		750A1B4021E8D818008D1056 /* AnyEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B3F21E8D818008D1056 /* AnyEquatable.swift */; };
-		7568852521EB4CF900CDB5CA /* ChartNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7568852421EB4CF900CDB5CA /* ChartNode.swift */; };
+		75285B8921ECD72100D0312E /* CGPath+Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75285B8821ECD72100D0312E /* CGPath+Arc.swift */; };
+		755D671221F263B400E820DA /* ArcNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D671121F263B400E820DA /* ArcNode.swift */; };
+		755D671421F263D600E820DA /* ArcLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D671321F263D600E820DA /* ArcLayout.swift */; };
+		755D671621F263EC00E820DA /* ArcStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D671521F263EC00E820DA /* ArcStyle.swift */; };
+		755D671821F3970500E820DA /* ArcTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D671721F3970500E820DA /* ArcTree.swift */; };
+		7568852521EB4CF900CDB5CA /* ArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7568852421EB4CF900CDB5CA /* ArcLayer.swift */; };
 		757BC2AC21E7D49D002D5EDF /* SunburstChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 757BC2AA21E7D49D002D5EDF /* SunburstChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		75DFFE0621EB600C00790930 /* NSBezierPath+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFFE0521EB600C00790930 /* NSBezierPath+Extensions.swift */; };
-		75DFFE0821EB66C700790930 /* SBChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFFE0721EB66C700790930 /* SBChartView.swift */; };
+		758BFCB621F0C9FE00276CB3 /* ArcContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758BFCB521F0C9FE00276CB3 /* ArcContainerLayer.swift */; };
+		75DFFE0821EB66C700790930 /* ArcChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFFE0721EB66C700790930 /* ArcChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		750342AB21EC9A92008DDB69 /* CAAnimation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAAnimation+Extensions.swift"; sourceTree = "<group>"; };
 		750342AD21EC9AEC008DDB69 /* CAAnimationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAAnimationHandler.swift; sourceTree = "<group>"; };
 		750342AF21ECA092008DDB69 /* NSColor+LighterDarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+LighterDarker.swift"; sourceTree = "<group>"; };
-		750A1B0F21E8D466008D1056 /* DifferenceKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DifferenceKit.framework; path = Carthage/Build/Mac/DifferenceKit.framework; sourceTree = "<group>"; };
-		750A1B3B21E8D6B4008D1056 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
-		750A1B3F21E8D818008D1056 /* AnyEquatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEquatable.swift; sourceTree = "<group>"; };
-		7568852421EB4CF900CDB5CA /* ChartNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartNode.swift; sourceTree = "<group>"; };
+		75285B8821ECD72100D0312E /* CGPath+Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPath+Arc.swift"; sourceTree = "<group>"; };
+		755D671121F263B400E820DA /* ArcNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcNode.swift; sourceTree = "<group>"; };
+		755D671321F263D600E820DA /* ArcLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcLayout.swift; sourceTree = "<group>"; };
+		755D671521F263EC00E820DA /* ArcStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcStyle.swift; sourceTree = "<group>"; };
+		755D671721F3970500E820DA /* ArcTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcTree.swift; sourceTree = "<group>"; };
+		7568852421EB4CF900CDB5CA /* ArcLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcLayer.swift; sourceTree = "<group>"; };
 		757BC2A721E7D49D002D5EDF /* SunburstChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SunburstChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		757BC2AA21E7D49D002D5EDF /* SunburstChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SunburstChart.h; sourceTree = "<group>"; };
 		757BC2AB21E7D49D002D5EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75DFFE0521EB600C00790930 /* NSBezierPath+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSBezierPath+Extensions.swift"; sourceTree = "<group>"; };
-		75DFFE0721EB66C700790930 /* SBChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBChartView.swift; sourceTree = "<group>"; };
+		758BFCB521F0C9FE00276CB3 /* ArcContainerLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcContainerLayer.swift; sourceTree = "<group>"; };
+		75DFFE0721EB66C700790930 /* ArcChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +43,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				750A1B1021E8D466008D1056 /* DifferenceKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +69,6 @@
 		750A1B0E21E8D439008D1056 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				750A1B0F21E8D466008D1056 /* DifferenceKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -84,18 +86,24 @@
 				750342AB21EC9A92008DDB69 /* CAAnimation+Extensions.swift */,
 				750342AF21ECA092008DDB69 /* NSColor+LighterDarker.swift */,
 				750342AD21EC9AEC008DDB69 /* CAAnimationHandler.swift */,
-				75DFFE0521EB600C00790930 /* NSBezierPath+Extensions.swift */,
-				750A1B3F21E8D818008D1056 /* AnyEquatable.swift */,
-				750A1B3B21E8D6B4008D1056 /* Identifiable.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		75285B8721ECD71600D0312E /* D3 */ = {
+			isa = PBXGroup;
+			children = (
+				75285B8821ECD72100D0312E /* CGPath+Arc.swift */,
+			);
+			path = D3;
 			sourceTree = "<group>";
 		};
 		7568852321EB4BCF00CDB5CA /* Drawing */ = {
 			isa = PBXGroup;
 			children = (
-				7568852421EB4CF900CDB5CA /* ChartNode.swift */,
-				75DFFE0721EB66C700790930 /* SBChartView.swift */,
+				7568852421EB4CF900CDB5CA /* ArcLayer.swift */,
+				758BFCB521F0C9FE00276CB3 /* ArcContainerLayer.swift */,
+				75DFFE0721EB66C700790930 /* ArcChartView.swift */,
 			);
 			path = Drawing;
 			sourceTree = "<group>";
@@ -120,6 +128,7 @@
 		757BC2A921E7D49D002D5EDF /* SunburstChart */ = {
 			isa = PBXGroup;
 			children = (
+				75285B8721ECD71600D0312E /* D3 */,
 				757BC2C821E7D622002D5EDF /* Models */,
 				7568852321EB4BCF00CDB5CA /* Drawing */,
 				750A1B3A21E8D6A6008D1056 /* Helpers */,
@@ -132,6 +141,10 @@
 		757BC2C821E7D622002D5EDF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				755D671721F3970500E820DA /* ArcTree.swift */,
+				755D671121F263B400E820DA /* ArcNode.swift */,
+				755D671321F263D600E820DA /* ArcLayout.swift */,
+				755D671521F263EC00E820DA /* ArcStyle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -158,7 +171,6 @@
 				757BC2A321E7D49D002D5EDF /* Sources */,
 				757BC2A421E7D49D002D5EDF /* Frameworks */,
 				757BC2A521E7D49D002D5EDF /* Resources */,
-				750A1B1221E8D47A008D1056 /* Copy frameworks (Carthage) */,
 			);
 			buildRules = (
 			);
@@ -181,7 +193,7 @@
 				TargetAttributes = {
 					757BC2A621E7D49D002D5EDF = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -213,40 +225,21 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		750A1B1221E8D47A008D1056 /* Copy frameworks (Carthage) */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/DifferenceKit.framework",
-			);
-			name = "Copy frameworks (Carthage)";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		757BC2A321E7D49D002D5EDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				750A1B4021E8D818008D1056 /* AnyEquatable.swift in Sources */,
 				750342B021ECA092008DDB69 /* NSColor+LighterDarker.swift in Sources */,
-				750A1B3C21E8D6B4008D1056 /* Identifiable.swift in Sources */,
+				75285B8921ECD72100D0312E /* CGPath+Arc.swift in Sources */,
 				750342AC21EC9A92008DDB69 /* CAAnimation+Extensions.swift in Sources */,
-				75DFFE0621EB600C00790930 /* NSBezierPath+Extensions.swift in Sources */,
-				7568852521EB4CF900CDB5CA /* ChartNode.swift in Sources */,
-				75DFFE0821EB66C700790930 /* SBChartView.swift in Sources */,
+				7568852521EB4CF900CDB5CA /* ArcLayer.swift in Sources */,
+				758BFCB621F0C9FE00276CB3 /* ArcContainerLayer.swift in Sources */,
+				75DFFE0821EB66C700790930 /* ArcChartView.swift in Sources */,
+				755D671621F263EC00E820DA /* ArcStyle.swift in Sources */,
+				755D671421F263D600E820DA /* ArcLayout.swift in Sources */,
+				755D671221F263B400E820DA /* ArcNode.swift in Sources */,
+				755D671821F3970500E820DA /* ArcTree.swift in Sources */,
 				750342AE21EC9AEC008DDB69 /* CAAnimationHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,7 +397,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -436,7 +429,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

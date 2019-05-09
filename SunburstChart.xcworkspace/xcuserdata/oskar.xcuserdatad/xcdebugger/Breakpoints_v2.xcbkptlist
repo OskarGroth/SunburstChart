@@ -9,126 +9,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SunburstChart/Models/ChartDataSource.swift"
-            timestampString = "569073803.099203"
+            filePath = "SunburstChart/Drawing/ArcLayer.swift"
+            timestampString = "579091540.6946779"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "ChartDataSource"
-            landmarkType = "21">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SunburstChart/Drawing/SBChartView.swift"
-            timestampString = "569161948.246363"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "mouseDown(with:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "contains(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SunburstChart.SBChartView.mouseDown(with: __C.NSEvent) -&gt; ()"
-                  moduleName = "SunburstChart"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/oskar/SunburstChart/SunburstChart/Drawing/SBChartView.swift"
-                  timestampString = "569150873.3007081"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "118">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.CALayer) -&gt; Swift.Bool in SunburstChart.SBChartView.mouseDown(with: __C.NSEvent) -&gt; ()"
-                  moduleName = "SunburstChart"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/oskar/SunburstChart/SunburstChart/Drawing/SBChartView.swift"
-                  timestampString = "569150873.303265"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "45">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SunburstChart/Helpers/NSColor+LighterDarker.swift"
-            timestampString = "569161948.2468899"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "color(withBrightness:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SunburstChart/Drawing/SBChartView.swift"
-            timestampString = "569161948.247069"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "mouseMoved(with:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SunburstChart.SBChartView.mouseMoved(with: __C.NSEvent) -&gt; ()"
-                  moduleName = "SunburstChart"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/oskar/SunburstChart/SunburstChart/Drawing/SBChartView.swift"
-                  timestampString = "569159503.1423711"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "124">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.CALayer) -&gt; Swift.Bool in SunburstChart.SBChartView.mouseMoved(with: __C.NSEvent) -&gt; ()"
-                  moduleName = "SunburstChart"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/oskar/SunburstChart/SunburstChart/Drawing/SBChartView.swift"
-                  timestampString = "569159503.1442389"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "45">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
