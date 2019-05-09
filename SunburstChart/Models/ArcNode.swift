@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol ArcNode: Comparable, Hashable, AnyEquatable {
+public protocol ArcNode: Comparable, Hashable {
     
     var name: String { get set }
     var size: CGFloat { get set }
@@ -16,7 +16,8 @@ public protocol ArcNode: Comparable, Hashable, AnyEquatable {
     var parent: Self? { get set }
     var height: Int { get set }
     var depth: Int { get set }
-    var layout: ArcLayout { get set }
     var style: ArcStyle? { get set }
+    
+    var layout: ArcLayout { get set }
     
 }

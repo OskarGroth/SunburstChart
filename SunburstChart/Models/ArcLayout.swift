@@ -24,7 +24,7 @@ public struct ArcLayout {
     
 }
 
-extension ArcLayout: Hashable, AnyEquatable {
+extension ArcLayout: Hashable {
     
     /// :nodoc:
     public static func == (lhs: ArcLayout, rhs: ArcLayout) -> Bool {

@@ -12,9 +12,12 @@ import os
 
 class ViewController: NSViewController {
     
+    @IBOutlet weak var button: NSButton!
+    
     lazy var chartView = ArcChartView(frame: view.bounds)
     
-    static let nodeData: TestNode = {
+    // Because I was too lazy to build a JSON dataset parser...
+    static var nodeData: TestNode = {
         let subA1 = TestNode(identifier: UUID().uuidString, name: "Sub A1", size: 4, children: [], depth: 2)
         let subA2 = TestNode(identifier: UUID().uuidString, name: "Sub A2", size: 4, children: [], depth: 2)
         let a = TestNode(identifier: UUID().uuidString, name: "Topic A", size: 8, children: [subA1, subA2], depth: 1)
@@ -48,14 +51,20 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         chartView.autoresizingMask = [.width, .height]
-        view.addSubview(chartView)
+        view.addSubview(chartView, positioned: .below, relativeTo: button)
+        d3Test()
+    }
+    
+    @IBAction func buttonPress(_ sender: Any) {
+        ViewController.nodeData.children[0].size = CGFloat(arc4random_uniform(10))
+        chartView.layer?.sublayers?.forEach({ $0.removeFromSuperlayer() })
         d3Test()
     }
     
     func d3Test() {
         let partition = TreePartition(root: ViewController.nodeData, size: 250)
         print(partition.nodes.count)
-        for i in 0...30 {
+        //for i in 0...30 { // For stress testing with small data set
             
             let logg = OSLog(
                 subsystem: "org.cindori.ChartDemo",
@@ -129,7 +138,7 @@ class ViewController: NSViewController {
                     "%{public}s",
                     "Node Setup"
                 )
-            }
+           // }
         }
  
     }

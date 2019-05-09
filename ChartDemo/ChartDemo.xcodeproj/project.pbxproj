@@ -11,7 +11,6 @@
 		750A1B2221E8D515008D1056 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A1B2121E8D515008D1056 /* ViewController.swift */; };
 		750A1B2721E8D516008D1056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750A1B2521E8D516008D1056 /* Main.storyboard */; };
 		75D93C3321F1DABF00FB1967 /* TestNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D93C3221F1DABF00FB1967 /* TestNode.swift */; };
-		75D93C4721F1E3DB00FB1967 /* DifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D93C4621F1E3DB00FB1967 /* DifferenceKit.framework */; };
 		75D93C5321F1E49400FB1967 /* SunburstChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D93C5221F1E48C00FB1967 /* SunburstChart.framework */; };
 		75D93C5421F1E49400FB1967 /* SunburstChart.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 75D93C5221F1E48C00FB1967 /* SunburstChart.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -37,7 +36,6 @@
 		750A1B2621E8D516008D1056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		750A1B2821E8D516008D1056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75D93C3221F1DABF00FB1967 /* TestNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNode.swift; sourceTree = "<group>"; };
-		75D93C4621F1E3DB00FB1967 /* DifferenceKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DifferenceKit.framework; path = ../Carthage/Build/Mac/DifferenceKit.framework; sourceTree = "<group>"; };
 		75D93C5221F1E48C00FB1967 /* SunburstChart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SunburstChart.framework; path = "../../Library/Developer/Xcode/DerivedData/SunburstChart-alcsvhddhjfvvnfistryxyhlkhtj/Build/Products/Debug/SunburstChart.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75D93C4721F1E3DB00FB1967 /* DifferenceKit.framework in Frameworks */,
 				75D93C5321F1E49400FB1967 /* SunburstChart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				75D93C5221F1E48C00FB1967 /* SunburstChart.framework */,
-				75D93C4621F1E3DB00FB1967 /* DifferenceKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,6 +122,7 @@
 				TargetAttributes = {
 					750A1B1B21E8D515008D1056 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -167,7 +164,6 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/../Carthage/Build/Mac/DifferenceKit.framework",
 			);
 			name = "Copy Frameworks (Carthage)";
 			outputFileListPaths = (
@@ -342,7 +338,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.cindori.ChartDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -368,7 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.cindori.ChartDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
